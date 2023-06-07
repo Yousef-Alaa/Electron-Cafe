@@ -1,0 +1,79 @@
+[
+  {
+    "uid": "PLM163",
+    "price": 2,
+    "stowage": 2,
+    "name": "Nescafe",
+    "icon": { "local": true, "src": "nescafe.png" }
+  },
+  {
+    "uid": "QNR149",
+    "price": 8,
+    "stowage": 6,
+    "name": "Coffee",
+    "icon": { "local": true, "src": "coffee.png" }
+  },
+  {
+    "uid": "TWX157",
+    "price": 10,
+    "stowage": 1,
+    "name": "Indomi",
+    "icon": { "local": true, "src": "indomi.png" }
+  },
+  {
+    "uid": "HJI989",
+    "price": 2,
+    "stowage": 15,
+    "name": "Mango",
+    "icon": { "local": true, "src": "mango-juice.png" }
+  },
+  {
+    "uid": "XII118",
+    "price": 10,
+    "stowage": 2,
+    "name": "7UP",
+    "icon": { "local": true, "src": "7up.png" }
+  },
+  {
+    "uid": "FKG852",
+    "price": 1,
+    "stowage": 6,
+    "name": "Pepsi",
+    "icon": { "local": true, "src": "pepsi.png" }
+  },
+  {
+    "uid": "ROE901",
+    "price": 3,
+    "stowage": 11,
+    "name": "Tea",
+    "icon": { "local": true, "src": "tea.png" }
+  },
+  {
+    "uid": "USF158",
+    "price": 8,
+    "stowage": 1,
+    "name": "Water",
+    "icon": { "local": true, "src": "water.png" }
+  },
+  {
+    "uid": "YTE509",
+    "price": 4,
+    "stowage": 3,
+    "name": "Mirnda Apple",
+    "icon": { "local": true, "src": "apple.png" }
+  },
+  {
+    "uid": "YYZ551",
+    "price": 4,
+    "stowage": 7,
+    "name": "Mirnda Orange",
+    "icon": { "local": true, "src": "mirnda-orange.png" }
+  },
+  {
+    "uid": "ESX202",
+    "price": 4,
+    "stowage": 6,
+    "name": "Orange",
+    "icon": { "local": true, "src": "orange-juice.png" }
+  }
+]

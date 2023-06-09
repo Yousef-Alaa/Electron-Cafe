@@ -48,7 +48,7 @@ function EditMarketItem({isEditModalOpen, setIsEditModalOpen, itemId, setItemId}
         <Modal title={`Editing item #${itemId}`} className='custom-modal' open={isEditModalOpen} onOk={handleOk} onCancel={() => {setIsEditModalOpen(false); setItemId('000000')}}>
             <Row>
                 <Col span={24} style={{textAlign: 'right'}}>
-                <img src={myItem.icon.local ? `/market/${myItem.icon.src}` : myItem.icon.src} width='40' height='40' alt='icon' />
+                <img src={myItem.icon.local ? `market/${myItem.icon.src}` : myItem.icon.src} width='40' height='40' alt='icon' />
                 </Col>
                 <Col span={24} style={{marginBottom: 15}}>
                     <label style={{display: 'block'}}>Name</label>

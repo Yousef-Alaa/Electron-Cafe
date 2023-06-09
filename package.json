@@ -4,7 +4,7 @@
   "description": "Internet Cafe Devices System Managment",
   "main": "./out/main/index.js",
   "author": "Yousef Alaa",
-  "homepage": "https://www.electronjs.org",
+  "homepage": "",
   "scripts": {
     "start": "electron-vite preview",
     "dev": "electron-vite dev --watch",
@@ -13,6 +13,33 @@
     "build:win": "npm run build && electron-builder --win --config",
     "build:mac": "npm run build && electron-builder --mac --config",
     "build:linux": "npm run build && electron-builder --linux --config"
+  },
+  "build":{
+    "productName":"Electron-Cafe",
+    "appId":"org.electron-cafe",
+    "dmg":{
+      "contents":[
+        { "x":130, "y":220 },
+        { "x":410, "y":220, "type":"link", "path":"/Applications" }
+      ]
+    },
+    "win":{
+      "icon": "build/icon.ico",
+      "publisherName": "Yousef Alaa",
+      "target":[ "nsis", "msi" ]
+    },
+    "linux":{
+      "icon": "build/icon.png",
+      "target":[ "deb", "rpm", "snap", "AppImage" ],
+      "category":"Development"
+    },
+    "mac": {
+      "icon": "build/icon.png"
+    },
+    "directories":{
+        "buildResources":"resources",
+        "output":"release"
+    }
   },
   "dependencies": {
     "@electron-toolkit/preload": "^1.0.3",

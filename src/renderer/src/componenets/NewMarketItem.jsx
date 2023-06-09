@@ -8,7 +8,8 @@ function NewMarketItem({ isNewModalOpen, setIsNewModalOpen }) {
 
     const dispatch = useDispatch()
     const [name, setName] = useState('')
-    const [localIcon, setLocalIcon] = useState('nescafe.png')
+    const images = window.api.marketImages
+    const [localIcon, setLocalIcon] = useState(images[0])
     const [stowage, setStowage] = useState(0)
     const [price, setPrice] = useState(0)
     const [iconURL, setIconURL] = useState('')
@@ -83,78 +84,16 @@ function NewMarketItem({ isNewModalOpen, setIsNewModalOpen }) {
                 <Col span={8}>
                     <label style={{display: 'block'}}>Icon</label> 
                     <Select
-                        defaultValue="nescafe.png"
+                        // defaultValue='nescafe.png'
                         value={localIcon}
                         style={{width: 75 }}
                         onChange={val => setLocalIcon(val)}
-                        options={[
-                            {
-                                value: 'coffee.png',
-                                label:<div style={{display: 'flex', justifyContent: 'center'}}>
-                                        <img src='/market/coffee.png' alt='coffee' width={30} height={30} />
+                        options={images.map(item => ({
+                            value: item,
+                            label:  <div style={{display: 'flex', justifyContent: 'center'}}>
+                                        <img src={`market/${item}`} alt={item.split('').slice(0, item.indexOf('.')).join('')} width={30} height={30} />
                                     </div>
-                            },
-                            {
-                                value: 'nescafe.png',
-                                label:<div style={{display: 'flex', justifyContent: 'center'}}>
-                                        <img src='/market/nescafe.png' alt='nescafe' width={30} height={30} />
-                                    </div>
-                            },
-                            {
-                                value: 'indomi.png',
-                                label:<div style={{display: 'flex', justifyContent: 'center'}}>
-                                        <img src='/market/indomi.png' alt='indomi' width={30} height={30} />
-                                    </div>
-                            },
-                            {
-                                value: 'mango-juice.png',
-                                label:<div style={{display: 'flex', justifyContent: 'center'}}>
-                                        <img src='/market/mango-juice.png' alt='mango' width={30} height={30} />
-                                    </div>
-                            },
-                            {
-                                value: '7up.png',
-                                label:<div style={{display: 'flex', justifyContent: 'center'}}>
-                                        <img src='/market/7up.png' alt='7up' width={30} height={30} />
-                                    </div>
-                            },
-                            {
-                                value: 'pepsi.png',
-                                label:<div style={{display: 'flex', justifyContent: 'center'}}>
-                                        <img src='/market/pepsi.png' alt='pepsi' width={30} height={30} />
-                                    </div>
-                            },
-                            {
-                                value: 'tea.png',
-                                label:<div style={{display: 'flex', justifyContent: 'center'}}>
-                                        <img src='/market/tea.png' alt='tea' width={30} height={30} />
-                                    </div>
-                            },
-                            {
-                                value: 'water.png',
-                                label:<div style={{display: 'flex', justifyContent: 'center'}}>
-                                        <img src='/market/water.png' alt='water' width={30} height={30} />
-                                    </div>
-                            },
-                            {
-                                value: 'apple.png',
-                                label:<div style={{display: 'flex', justifyContent: 'center'}}>
-                                        <img src='/market/apple.png' alt='apple' width={30} height={30} />
-                                    </div>
-                            },
-                            {
-                                value: 'mirnda-orange.png',
-                                label:<div style={{display: 'flex', justifyContent: 'center'}}>
-                                        <img src='/market/mirnda-orange.png' alt='mirnda' width={30} height={30} />
-                                    </div>
-                            },
-                            {
-                                value: 'orange-juice.png',
-                                label:<div style={{display: 'flex', justifyContent: 'center'}}>
-                                        <img src='/market/orange-juice.png' alt='orange' width={30} height={30} />
-                                    </div>
-                            },
-                        ]}
+                        }))}
                     />
                 </Col>
                 <Col span={8} style={{marginBottom: 15}}>

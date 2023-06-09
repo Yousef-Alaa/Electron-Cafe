@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 let initialState = {
     pc: {
-        devices: 10,//TODO set to Zero
+        devices: 0,
         hourPrice: 0,
     },
     ps4: {

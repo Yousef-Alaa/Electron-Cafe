@@ -74,7 +74,7 @@ export default function Market() {
             return {
             ...item, 
             key: i,
-            iconAsImg: <img src={item.icon.local ? `/market/${item.icon.src}` : item.icon.src} width='40' height='40' alt='icon' />,
+            iconAsImg: <img src={item.icon.local ? `market/${item.icon.src}` : item.icon.src} width='40' height='40' alt='icon' />,
             actions: <div style={{
                 display: 'flex',
                 alignItems: 'center',

@@ -1,7 +1,6 @@
-import { app, BrowserWindow, Tray, Menu, ipcMain  } from 'electron'
+import { app, BrowserWindow, Tray, ipcMain  } from 'electron'
 import { join } from 'path'
 import { optimizer, is } from '@electron-toolkit/utils'
-import { ApplyMainMenu } from './MainMenu'
 import stateKeeper from 'electron-window-state'
 import icon from '../../resources/appicon.ico?asset'
 import Store from 'electron-store'
@@ -18,7 +17,8 @@ const store = new Store();
  5 => Yellow Border
  6 => username & password
  7 => (Done) Some Colors Issue
- 8 => Fix load config issue
+ 8 => (Done) Fix load config issue
+ 9 => (Done) Fix App Icon & Images
 */
 
 let mainWindow, tray = null;
@@ -109,7 +109,6 @@ function createWindow() {
   console.log('3 => ', app.getAppPath());
 
   1 =>  C:\Users\Administrator\AppData\Roaming
-
   2 =>  C:\Users\Administrator\AppData\Roaming\electron-cafe
   3 =>  C:\Users\Administrator\Desktop\electron-cafe 
 */
@@ -158,19 +157,10 @@ app.whenReady().then(() => {
 
   createWindow()
 
-  ApplyMainMenu()
-
   manageConfigFile()
 
   tray = new Tray(icon)
-  const trayMenu = Menu.buildFromTemplate([
-    { label: 'Item1', type: 'radio' },
-    { label: 'Item2', type: 'radio', checked: true },
-    { label: 'Do 1'},
-    { label: 'Do 2'}
-  ])
-  tray.setToolTip('Internet Cafe.')
-  tray.setContextMenu(trayMenu)
+  tray.setToolTip('Electron-Cafe.')
   tray.on('click', () => {
     mainWindow.isVisible() ? mainWindow.hide() : mainWindow.show()
   })

@@ -52,7 +52,6 @@ export default function Reports() {
                 </div>
             </div>
             {
-                // TODO: Make The No Data Section
                 renderList.length === 0 ? <div className='no-data no-data-reports'><NODATA /></div> :(<>
                     <div className='head'>
                         <span>type</span>

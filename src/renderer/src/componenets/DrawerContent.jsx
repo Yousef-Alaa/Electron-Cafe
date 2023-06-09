@@ -173,7 +173,7 @@ function MarketItems({ unitState, unitDispatcher, ordersTotal, isOpen, setIsOpen
             {unitState.orders.length > 0 && <div className='menu-items'>
                 {
                     unitState.orders.map((item, i) => <div key={i} onClick={() => handleClick(item.uid)}>
-                        <img src={item.icon.local ? `/market/${item.icon.src}` : item.icon.src} width={50} height={50} alt={`market item ${i + 1}`} />
+                        <img src={item.icon.local ? `market/${item.icon.src}` : item.icon.src} width={50} height={50} alt={`market item ${i + 1}`} />
                         <span className='name'>{item.name}</span>
                         <span className='price'>{item.price}$</span>
                     </div>)
